@@ -1,0 +1,31 @@
+class Garant ():
+    def __init_subclass__(self,secretary, security, accountant, employee ):
+        self.secretary = secretary
+        self.security = security
+        self.accountant = accountant
+        self.employee = employee
+
+    #Секреташа встечает и спрашвивает как дела, если плохо предлагает кофе
+    # Охранник вхвешивает сумку если сумка больше 10 кг тогда не пустит
+    # Бухгалте считает мне зп с учетом отчета сотрудника на 1500 продаж в мес.
+    # Сотрудник считает ппродажи по  200 300 и 1000 руб
+
+    def secretary_in (self):
+        if input("Как дела? - ОК") == self.secretary:
+            print('Проходите - на рабочее место')
+        else:
+            print('Я налью вам кофе')
+
+    def security_in (self):
+        if input('Поставьте на весы сумку - ') >self.security:
+            print ('Идите домой я вас не пропущу')
+        else:
+            print('Проходите на рабочее')
+
+    def accountant_in (self):
+        pass
+
+
+
+vasy = Garant('ОК')
+vasy.security_in('OK')
